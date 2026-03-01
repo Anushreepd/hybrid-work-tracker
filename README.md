@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# 🏢 Hybrid Work Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A calendar-based attendance tracking application built using **React + Redux Toolkit**.
 
-## Available Scripts
+This tool helps employees track their monthly:
 
-In the project directory, you can run:
+- 🟢 Work From Office (WFO)
+- 🔵 Work From Home (WFH)
+- 🔴 Leave
 
-### `npm start`
+It also calculates **monthly WFO compliance (3 days per week rule)** and displays a visual dashboard summary.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Live Features
 
-### `npm test`
+### 📅 Interactive Calendar
+- Monthly calendar view
+- Navigate between months
+- Weekends automatically disabled
+- Click any weekday to mark attendance
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🎯 Attendance Status Options
+- WFO
+- WFH
+- Leave
 
-### `npm run build`
+### 📊 Monthly Summary Dashboard
+- Total WFO days
+- Total WFH days
+- Total Leave days
+- WFO Compliance percentage
+- Dynamic progress bar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 💾 Persistent Data
+- Data stored in localStorage
+- Attendance remains after refresh
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧠 Business Logic
 
-### `npm run eject`
+- 3 WFO days required per week
+- Monthly required WFO automatically calculated
+- Compliance percentage dynamically updated
+- Progress capped at 100%
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React
+- Redux Toolkit
+- React Redux
+- date-fns
+- CSS Flexbox & Grid
+- LocalStorage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📂 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+ ├── app/
+ │    └── store.js
+ ├── features/
+ │    └── attendance/
+ │         └── attendanceSlice.js
+ ├── components/
+ │    └── Calendar.js
+ ├── App.js
+ └── App.css
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ⚙️ Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone <your-repo-url>
+cd hybrid-work-tracker
+npm install
+npm start
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📈 Future Enhancements
 
-### Making a Progressive Web App
+- Weekly compliance breakdown
+- Yearly overview
+- Analytics charts
+- Export attendance report (PDF)
+- Dark mode
+- Authentication system
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 💡 Why This Project?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project demonstrates:
 
-### Deployment
+- Real-world business rule implementation
+- State management using Redux Toolkit
+- Derived data calculations
+- Dynamic UI rendering
+- Clean dashboard layout architecture
+- Persistence using localStorage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👩‍💻 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built as part of React & Redux learning journey.
