@@ -64,9 +64,9 @@ It also calculates **monthly WFO compliance (3 days per week rule)** and display
 src/
  ├── app/
  │    └── store.js
- ├── features/
- │    └── attendance/
- │         └── attendanceSlice.js
+      └── features/
+           └── attendance/
+                └── attendanceSlice.js
  ├── components/
  │    └── Calendar.js
  ├── App.js
